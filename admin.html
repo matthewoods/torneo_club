@@ -90,8 +90,8 @@
         const ADMIN_PASSWORD = "go-club-admin"; // Cambiala qui!
         let isAdmin = false;
 
-        let players = JSON.parse(localStorage.getItem('go_v3_players')) || [];
-        let matches = JSON.parse(localStorage.getItem('go_v3_matches')) || [];
+        let players = JSON.parse(localStorage.getItem('goClub_players_v2')) || [];
+        let matches = JSON.parse(localStorage.getItem('goClub_matches_v2')) || [];
 
         function toggleAdmin() {
             if (!isAdmin) {
@@ -113,8 +113,8 @@
         }
 
         function save() {
-            localStorage.setItem('go_v3_players', JSON.stringify(players));
-            localStorage.setItem('go_v3_matches', JSON.stringify(matches));
+            localStorage.setItem('goClub_players_v2', JSON.stringify(players));
+            localStorage.setItem('goClub_matches_v2', JSON.stringify(matches));
             render();
         }
 
